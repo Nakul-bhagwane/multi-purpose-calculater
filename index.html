@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav">
+            <div id="calculater_section" class="active_div">Calculater</div>
+            <div id="exchange_section">Exchange rate</div>
+            <div id="converter_section">Converter</div>
+        </div>
+    </nav>
+
+    <section>
+
+        <div class="slider">
+            <!-- <div class="right_btn"></div>
+            <div class="left_btn"></div> -->
+
+            <div id="calculater">
+                <textarea id="app_screen"></textarea> <br>
+                <button class="btns">1</button> <button class="btns">2</button> <button class="btns">3</button> <br>
+                <button class="btns">4</button> <button class="btns">5</button> <button class="btns">6</button> <br>
+                <button class="btns">7</button> <button class="btns">8</button> <button class="btns">9</button> <br>
+                <button class="btns colorNeon">+</button> <button class="btns">0</button> <button class="btns colorNeon">-</button> <br>
+                <button class="btns colorNeon">X</button> <button class="btns colorNeon">.</button> <button class="btns colorNeon">/</button> <br>
+                <button class="btns colorNeon">DEL</button> <button class="btns colorNeon">=</button> <button class="btns colorNeon">AC</button> <br>
+            </div>
+
+
+            <div id="exchange">
+                <div id="currency_options">
+                    <div id="hider"><h3>X</h3></div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> INR </h3> </div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> ARS </h3> </div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> USD </h3> </div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> Dinar </h3> </div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> RUB </h3> </div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> Taka </h3 ></div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> CAD </h3> </div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> AUD </h3> </div>
+                    <div class="options"> <h3 onclick="exchangeOptionSetter(this)"> CLP </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> COP </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> EGP </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> EUR </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> HKD </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> IDR </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> IRR </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> IQD </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> JOD </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> KZT </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> NPR </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> MAD </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> MXN </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> NZD </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> QAR </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> PHP </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> ZAR </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> AED </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> ZMW </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> UGX </h3> </div>
+                    <div class="options"> <h3  onclick="exchangeOptionSetter(this)"> TBH </h3> </div>
+                </div> 
+                <div class="ex-holder1-inp">
+                    <div class="indicator1" id="currencyOptionsBtn1" onclick="CurrencyOptionsVisible('section1')">USD</div>
+                    <textarea type="text" class="converter1" onclick="currencyInput('currencyInput1')" placeholder="display one"></textarea>
+                </div>
+                <div class="ex-holder2-inp" >
+                    <div class="indicator2" id="currencyOptionsBtn2" onclick="CurrencyOptionsVisible('section2')">INR</div>
+                    <textarea type="text" class="converter2" onclick="currencyInput('currencyInput2')" placeholder="display one"></textarea>
+                </div>
+                <button class="CE_btns">1</button> <button class="CE_btns">2</button> <button class="CE_btns">3</button> <br>
+                <button class="CE_btns">4</button> <button class="CE_btns">5</button> <button class="CE_btns">6</button> <br>
+                <button class="CE_btns">7</button> <button class="CE_btns">8</button> <button class="CE_btns">9</button> <br>
+                <button class="CE_btns">0</button> <button class="CE_btns colorNeon">.</button> <button class="CE_btns colorNeon">DEL</button> <br>
+                <button class="CE_btns colorNeon currencyEqual" >=</button> <button class="CE_btns colorNeon currencyAC">AC</button> <br>
+            </div>
+
+            
+            <div id="convertermain">
+
+                <div id="displayForLength">
+                    <div onclick="converterUnitsHider('Length')" class="converterDisplays"><h3>X</h3></div>
+                    
+                    <div><h3 onclick="units(this)">Meter</h3></div>
+                    <div><h3 onclick="units(this)">centimeter</h3></div>
+                    <div><h3 onclick="units(this)">kilometer</h3></div>
+                    <div><h3 onclick="units(this)">inch</h3></div>
+                    <div><h3 onclick="units(this)">foot</h3></div>
+                </div>
+
+                <div id="displayForArea">
+                    <div onclick="converterUnitsHider('Area')" class="converterDisplays"><h3>X</h3></div>
+                    <div><h3 onclick="units(this)">square meter</h3></div>
+                    <div><h3 onclick="units(this)">square centimeter</h3></div>
+                    <div><h3 onclick="units(this)">square kilometer</h3></div>
+                    <div><h3 onclick="units(this)">square dcimeter</h3></div>
+                    <div><h3 onclick="units(this)">acre</h3></div>
+                </div>
+
+                <div id="displayForVolume">
+                    <div onclick="converterUnitsHider('Volume')" class="converterDisplays"><h3>X</h3></div>
+                    <div><h3 onclick="units(this)">Hectoliter</h3></div>
+                    <div><h3 onclick="units(this)">Ccubic meter</h3></div>
+                    <div><h3 onclick="units(this)">Cubic centimeter</h3></div>
+                    <div><h3 onclick="units(this)">Liter</h3></div>
+                    <div><h3 onclick="units(this)">Mililiter</h3></div>
+                </div>
+
+                <div id="displayForSpeed">
+                    <div onclick="converterUnitsHider('Speed')" class="converterDisplays"><h3>X</h3></div>
+                    <div><h3 onclick="units(this)">speed of light</h3></div>
+                    <div><h3 onclick="units(this)">Km/s</h3></div>
+                    <div><h3 onclick="units(this)">Mile/hour</h3></div>
+                    <div><h3 onclick="units(this)">Km/hour</h3></div>
+                    <div><h3 onclick="units(this)">Meter/s</h3></div>
+                </div>
+
+                <div id="displayForWeight">
+                    <div onclick="converterUnitsHider('Weight')" class="converterDisplays"><h3>X</h3></div>
+                    <div><h3 onclick="units(this)">Kg</h3></div>
+                    <div><h3 onclick="units(this)">Mg</h3></div>
+                    <div><h3 onclick="units(this)">Quintal</h3></div>
+                    <div><h3 onclick="units(this)">Ton</h3></div>
+                    <div><h3 onclick="units(this)">Microgram</h3></div>
+                </div>
+
+                <div id="displayForTemprature">
+                    <div onclick="converterUnitsHider('Temprature')" class="converterDisplays"><h3>X</h3></div>
+                    <div><h3 onclick="units(this)">Degree Rankine</h3></div>
+                    <div><h3 onclick="units(this)">Degree Celsius</h3></div>
+                    <div><h3 onclick="units(this)">Degree Reaumur</h3></div>
+                    <div><h3 onclick="units(this)">Degree Fahrenheit</h3></div>
+                    <div><h3 onclick="units(this)">Kelvin</h3></div>
+                </div>
+
+                <div id="displayForPower">
+                    <div onclick="converterUnitsHider('Power')" class="converterDisplays"><h3>X</h3></div>
+                    <div><h3 onclick="units(this)">Joule/s</h3></div>
+                    <div><h3 onclick="units(this)">Watt</h3></div>
+                    <div><h3 onclick="units(this)">Metric Horsepower</h3></div>
+                    <div><h3 onclick="units(this)">Kilowatt</h3></div>
+                    <div><h3 onclick="units(this)">Newton-meter/s</h3></div>
+                </div>
+
+                <div id="displayForPressure">
+                    <div onclick="converterUnitsHider('Pressure')" class="converterDisplays"><h3>X</h3></div>
+                    <div><h3 onclick="units(this)">Pounds/square foot</h3></div>
+                    <div><h3 onclick="units(this)">Pounds/square inch</h3></div>
+                    <div><h3 onclick="units(this)">Milimeter of mercury</h3></div>
+                    <div><h3 onclick="units(this)">Bar</h3></div>
+                    <div><h3 onclick="units(this)">Milibar</h3></div>
+                    <div><h3 onclick="units(this)">Hectopascal</h3></div>
+                </div>
+
+                <div id="converterScreen">
+                    <div class="converter-holder1-inp">
+                        <div class="converter_indiicator1" id="converterBtn1" onclick="convertersUnits('units section 1')">meter</div>
+                        <textarea type="text" class="mainConverter1" placeholder="display one"></textarea>
+                    </div>
+                    <div class="converter-holder2-inp" >
+                        <div class="converter_indicator2" id="converterBtn2" onclick="convertersUnits('units section 2')">km.</div>
+                        <textarea type="text" class="mainConverter2" placeholder="display one"></textarea>
+                    </div>
+                    <button class="Cnv_btns">1</button> <button class="Cnv_btns">2</button> <button class="Cnv_btns">3</button> <br>
+                    <button class="Cnv_btns">4</button> <button class="Cnv_btns">5</button> <button class="Cnv_btns">6</button> <br>
+                    <button class="Cnv_btns">7</button> <button class="Cnv_btns">8</button> <button class="Cnv_btns">9</button> <br>
+                    <button class="Cnv_btns">0</button> <button class="Cnv_btns CnvcolorNeon">.</button> <button class="Cnv_btns coloCnvcolorNeonrNeon">DEL</button> <br>
+                    <button class="Cnv_btns CnvcolorNeon CnvEqual" >=</button> <button class="Cnv_btns CnvcolorNeon CnvAC">AC</button> <br>
+                    <button class="Cnv_btns CnvcolorNeon CnvEXIT" id="converterSreenExit">EXIT</button> <br>
+                </div>
+
+               <div id="length" class="converterChild"  onclick="converterOptionBtn('this is length')"><h1>Length</h1></div>
+               <div id="area"   class="converterChild"  onclick="converterOptionBtn('this is area')"><h1>Area</h1></div>
+               <div id="volume" class="converterChild"  onclick="converterOptionBtn('this is volume')"><h1>Volume</h1></div>
+               <div id="speed"  class="converterChild"  onclick="converterOptionBtn('this is speed')"><h1>Speed</h1></div>
+               <div id="weight" class="converterChild"  onclick="converterOptionBtn('this is weight')"><h1>Weight</h1></div>
+               <div id="temprature" class="converterChild"  onclick="converterOptionBtn('this is temprature')"><h1>Temprature</h1></div>
+               <div id="power"  class="converterChild"  onclick="converterOptionBtn('this is power')"><h1>Power</h1></div>
+               <div id="pressure" class="converterChild"  onclick="converterOptionBtn('this is pressure')"><h1>Pressure</h1></div>
+            </div>
+        </div>
+
+        
+    </section>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
